@@ -55,7 +55,6 @@ const PostCard = ({item, onDelete, onPress}) => {
       .get()
       .then((documentSnapshot) => {
         if (documentSnapshot.exists) {
-          console.log('User Data', documentSnapshot.data());
           setUserData(documentSnapshot.data());
         }
       });
@@ -65,13 +64,13 @@ const PostCard = ({item, onDelete, onPress}) => {
     getUser();
   }, []);
 
-  const [color, setColor] = useState("heart-outline")
-  function onLike(color){
-    setColor(color === "heart" ? "heart-outline" : "heart")
+  const [color, setColor] = useState('heart-outline');
+  function onLike(color) {
+    setColor(color === 'heart' ? 'heart-outline' : 'heart');
   }
 
   return (
-    <Card key={item.id} style={{width: 400}}>
+    <Card key={item.id} style={{width: 360}}>
       <UserInfo>
         <UserImg
           source={{
@@ -105,7 +104,7 @@ const PostCard = ({item, onDelete, onPress}) => {
       )}
 
       <InteractionWrapper>
-        <Interaction active={item.liked} onPress={()=>onLike(color)}>
+        <Interaction active={item.liked} onPress={() => onLike(color)}>
           <Ionicons name={color} size={25} color={likeIconColor} />
           <InteractionText active={item.liked}>{likeText}</InteractionText>
         </Interaction>

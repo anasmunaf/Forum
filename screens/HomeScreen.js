@@ -18,6 +18,8 @@ import storage from '@react-native-firebase/storage';
 import firestore from '@react-native-firebase/firestore';
 
 import {Container} from '../styles/FeedStyles';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import AppStyle from '../src/styles/AppStyle';
 
 const Posts = [
   {
@@ -215,6 +217,43 @@ const HomeScreen = ({navigation}) => {
   };
   return (
     <SafeAreaView style={{flex: 1}}>
+      <View
+        style={{
+          flex: 0,
+          flexDirection: 'row',
+          justifyContent: 'space-around',
+          backgroundColor: '#efefdd',
+          elevation: 4,
+          height: 80,
+          alignItems: 'flex-end',
+        }}>
+        <FontAwesome5.Button
+          name="user"
+          size={22}
+          backgroundColor="#efefdd"
+          color="#007ba4"
+          solid
+          onPress={() => navigation.navigate('Profile')}
+        />
+        <View>
+          <Text
+            style={{
+              fontWeight: '700',
+              color: '#007ba4',
+              fontSize: 24,
+              marginTop: 0,
+            }}>
+            DISCUSSION FEED
+          </Text>
+        </View>
+        <FontAwesome5.Button
+          name="plus"
+          size={22}
+          backgroundColor="#efefdd"
+          color="#007ba4"
+          onPress={() => navigation.navigate('AddPost')}
+        />
+      </View>
       {loading ? (
         <ScrollView
           style={{flex: 1}}

@@ -71,7 +71,7 @@ const SignupScreen = ({navigation}) => {
             backgroundColor="#e6eaf4"
             onPress={() => {}}
           />
-    
+
           <SocialButton
             buttonTitle="Sign Up with Google"
             btnType="google"
