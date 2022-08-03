@@ -7,12 +7,12 @@ import {
   YearlyPapers,
 } from '../Screens/ByAnnual/A_level';
 const Tab = createBottomTabNavigator();
-const ALevelPaperCategoryTab = props => {
+const ALevelPaperCategoryTab = (props) => {
   return (
     <Tab.Navigator
       initialRouteName={NavigationConstant.ALL}
-      screenOptions={{
-        tabBarStyle: {
+      tabBarOptions={{
+        style: {
           position: 'absolute',
           top: 100,
           left: 20,
@@ -21,8 +21,8 @@ const ALevelPaperCategoryTab = props => {
           borderRadius: 15,
         },
         headerShown: false,
-        tabBarIconStyle: {display: 'none'},
-        tabBarLabelStyle: {
+        iconStyle: {display: 'none'},
+        labelStyle: {
           fontSize: 18,
           marginBottom: 15,
         },
