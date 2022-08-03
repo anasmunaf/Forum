@@ -4,8 +4,9 @@ import {AuthContext} from './AuthProvider';
 
 import AuthStack from './AuthStack';
 import FeedStack from './AppStack';
+import HomeScreen from '../screens/HomeScreen';
 
-const Routes = () => {
+const Routes = (props) => {
   const {user, setUser} = useContext(AuthContext);
   const [initializing, setInitializing] = useState(true);
 
@@ -21,7 +22,7 @@ const Routes = () => {
 
   if (initializing) return null;
 
-  return <>{user ? <FeedStack /> : <AuthStack />}</>;
+  return <>{user ? <HomeScreen {...props} /> : <AuthStack />}</>;
 };
 
 export default Routes;

@@ -215,6 +215,7 @@ const HomeScreen = ({navigation}) => {
   const ListHeader = () => {
     return null;
   };
+
   return (
     <SafeAreaView style={{flex: 1}}>
       <View
@@ -233,7 +234,7 @@ const HomeScreen = ({navigation}) => {
           backgroundColor="#efefdd"
           color="#007ba4"
           solid
-          onPress={() => navigation.navigate('Profile')}
+          onPress={() => navigation.navigate('FeedStack', {screen: 'Profile'})}
         />
         <View>
           <Text
@@ -251,7 +252,7 @@ const HomeScreen = ({navigation}) => {
           size={22}
           backgroundColor="#efefdd"
           color="#007ba4"
-          onPress={() => navigation.navigate('AddPost')}
+          onPress={() => navigation.navigate('FeedStack', {screen: 'AddPost'})}
         />
       </View>
       {loading ? (

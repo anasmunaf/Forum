@@ -51,7 +51,6 @@ const FeedStack = ({navigation}) => (
       name="Profile"
       component={ProfileScreen}
       options={{
-        headerTitleAlign: 'center',
         title: 'Profile',
         headerTitleAlign: 'center',
         headerTitleStyle: {
@@ -59,6 +58,7 @@ const FeedStack = ({navigation}) => (
           fontSize: 24,
         },
         headerStyle: {
+          marginTop: 20,
           backgroundColor: '#efefdd',
           elevation: 4,
         },

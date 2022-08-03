@@ -14,6 +14,7 @@ import {
 } from '../Screens/ByTopic/O_level';
 import CustomPapers from '../components/CustomPapers';
 import TopicalPaper from '../Screens/ByTopic/O_level/TopicalPaper';
+import FeedStack from '../../navigation/AppStack';
 const Stack = createStackNavigator();
 
 const Routes = (props) => {
@@ -80,6 +81,13 @@ const Routes = (props) => {
         <Stack.Screen
           name={NavigationConstants.CUSTOM_PAPERS}
           children={(props) => <TopicalPaper {...props} />}
+          options={{
+            title: ``,
+          }}
+        />
+        <Stack.Screen
+          name={'FeedStack'}
+          children={(props) => <FeedStack {...props} />}
           options={{
             title: ``,
           }}

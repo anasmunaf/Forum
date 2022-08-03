@@ -65,7 +65,7 @@ const ProfileScreen = ({navigation, route}) => {
         setLoading(false);
       }
 
-      console.log('Posts: ', posts);
+      // console.log('Posts: ', posts);
     } catch (e) {
       console.log(e);
     }
@@ -130,7 +130,7 @@ const ProfileScreen = ({navigation, route}) => {
               <TouchableOpacity
                 style={styles.userBtn}
                 onPress={() => {
-                  navigation.navigate('EditProfile');
+                  navigation.navigate('FeedStack', {screen: 'EditProfile'});
                 }}>
                 <Text style={styles.userBtnTxt}>Edit</Text>
               </TouchableOpacity>
