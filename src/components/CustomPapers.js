@@ -8,13 +8,14 @@ const CustomPapers = ({uri}) => {
       <FastImage
         style={{
           width: Dimensions.get('window').width,
-          height: 200,
+          height: Dimensions.get('window').height,
         }}
         source={{
           uri: uri,
           headers: {Authorization: 'someAuthToken'},
           priority: FastImage.priority.normal,
         }}
+        resizeMode={FastImage.resizeMode.contain}
       />
     </>
   );

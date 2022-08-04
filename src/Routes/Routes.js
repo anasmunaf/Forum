@@ -10,8 +10,12 @@ import {Subjects as ALevelSubjects} from '../Screens/ByAnnual/A_level';
 import ALevelPaperCategoryTab from './ALevelPaperCategoryTab';
 import {
   Subjects as OLevelSubjective,
-  TopicFilter,
+  TopicFilter as OLevelTopics,
 } from '../Screens/ByTopic/O_level';
+import {
+  Subjects as ALevelSubjective,
+  TopicFilter as ALevelTopics,
+} from '../Screens/ByTopic/A_level';
 import CustomPapers from '../components/CustomPapers';
 import TopicalPaper from '../Screens/ByTopic/O_level/TopicalPaper';
 import FeedStack from '../../navigation/AppStack';
@@ -72,8 +76,22 @@ const Routes = (props) => {
           }}
         />
         <Stack.Screen
+          name={NavigationConstants.A_LEVEL.SUBJECT_TOPICAL}
+          component={ALevelSubjective}
+          options={{
+            title: ``,
+          }}
+        />
+        <Stack.Screen
           name={NavigationConstants.O_LEVEL.TOPIC_FILTER}
-          children={(props) => <TopicFilter {...props} />}
+          children={(props) => <OLevelTopics {...props} />}
+          options={{
+            title: ``,
+          }}
+        />
+        <Stack.Screen
+          name={NavigationConstants.A_LEVEL.TOPIC_FILTER}
+          children={(props) => <ALevelTopics {...props} />}
           options={{
             title: ``,
           }}

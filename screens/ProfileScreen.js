@@ -93,7 +93,7 @@ const ProfileScreen = ({navigation, route}) => {
   const handleDelete = () => {};
 
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
+    <SafeAreaView style={{flex: 1, backgroundColor: '#fff', marginTop: 50}}>
       <ScrollView
         style={styles.container}
         contentContainerStyle={{justifyContent: 'center', alignItems: 'center'}}

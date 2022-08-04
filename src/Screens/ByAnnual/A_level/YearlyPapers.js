@@ -2,11 +2,13 @@ import React, {useEffect, useState} from 'react';
 import PaperScrollView from '../../../components/PaperScrollView';
 import {OYearlyData} from '../../../utils/Api/O-Yearly-Api';
 
-const YearlyPapers = props => {
+const YearlyPapers = (props) => {
   const [papers, setPapers] = useState();
   useEffect(() => {
-    OYearlyData().then(data => {
-      setPapers(data);
+    OYearlyData().then((data) => {
+      setPapers(
+        data?.filter((item) => item.subject === props.route.params.subject),
+      );
     });
   }, []);
 

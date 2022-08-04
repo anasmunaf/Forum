@@ -108,10 +108,10 @@ const PostCard = ({item, onDelete, onPress}) => {
           <Ionicons name={color} size={25} color={likeIconColor} />
           <InteractionText active={item.liked}>{likeText}</InteractionText>
         </Interaction>
-        <Interaction>
+        {/* <Interaction>
           <Ionicons name="md-chatbubble-outline" size={25} />
           <InteractionText>{commentText}</InteractionText>
-        </Interaction>
+        </Interaction> */}
         {user.uid == item.userId ? (
           <Interaction onPress={() => onDelete(item.id)}>
             <Ionicons name="md-trash-bin" size={25} />
